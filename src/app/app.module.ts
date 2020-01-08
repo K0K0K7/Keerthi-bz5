@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,7 +9,6 @@ import { HomeComponent } from './home/home.component';
 import { ColorComponent } from './color/color.component';
 import { UserComponent } from './user/user.component';
 import { CountryComponent } from './country/country.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,8 @@ import { CountryComponent } from './country/country.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
