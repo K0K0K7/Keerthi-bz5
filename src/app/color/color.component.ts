@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DataService } from '../data.service';
 @Component({
-  selector: 'app-color',
-  templateUrl: './color.component.html',
-  styleUrls: ['./color.component.css']
+ selector: 'app-country',
+ templateUrl: './country.component.html',
+ styleUrls: ['./country.component.css']
 })
-export class ColorComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+export class CountryComponent implements OnInit {
+ countries;
+ constructor(private data: DataService) { }
+ ngOnInit() {
+ this.data.getCountries().subscribe(d => {
+ this.countries = d;
+ })
   }
-
 }
