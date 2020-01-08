@@ -8,6 +8,8 @@ export class DataService {
 
   constructor(private http:HttpClient) { }
     getCountries(){
-    return this.http.get('https://restcountries.eu/rest/v2/all');
+    return this.http.get('https://restcountries.eu/rest/v2/all');}
+    getUsers(){
+      return this.http.get('https://jsonplaceholder.typicode.com/users');
   }
 }

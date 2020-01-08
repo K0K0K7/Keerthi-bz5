@@ -1,1 +1,16 @@
-<p>user works!</p>
+    <table class="table table-striped">
+    <thead>
+    <tr>
+    <th>NAME</th>
+    <th>CITY</th>
+    <th>COMPANY</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let u of users">
+    <td>{{u.name}}</td>
+    <td>{{u.address.city}}</td>
+    <td>{{u.company.name}}</td>
+    </tr>
+    </tbody>
+    </table>
