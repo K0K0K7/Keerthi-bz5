@@ -6,7 +6,8 @@ import  {HttpClient} from '@angular/common/http';
 })
 export class DataService {
 
-  constructor(private http:HttpClient) { 
-    return this.http.get('http://restcountries.eu/rest/v2/all');
+  constructor(private http:HttpClient) { }
+    getCountries(){
+    return this.http.get('https://restcountries.eu/rest/v2/all');
   }
 }
